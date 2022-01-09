@@ -1,8 +1,9 @@
 #include<stdio.h>
-int main(){
-  int l,b,a;
-  printf("enter the values of l and b\n");
-  scanf("%d%d",&l,&b);
-  a=l*b;
-  printf("area of rectangle = %d\n",a);
+int main() {
+  int a,b,sum;
+  printf("enter two numbers\n");
+  scanf("%d%d",&a,&b);
+  sum=a+b;
+  printf("%d%d=%d\n",a,b,sum);
+  return 0;
 }
