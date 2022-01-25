@@ -1,10 +1,21 @@
 gcc -g p5final.c
  ./a.out
-enter three numbers
+enter three numbers:3
+3
+3
+all numbers are equal 
+ gcc -g p5final.c
+ ./a.out
+enter three numbers:3
+3
+2
+invalid 
+ gcc -g p5final.c
+ ./a.out
+enter three numbers:2
+3
 4
-6
-8
-c is big
+c is greater 
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -22,27 +33,21 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x722: file p5final.c, line 2.
+Breakpoint 1 at 0x87b: file p5final.c, line 52.
 (gdb) r
 Starting program: /home/runner/pps-test1-RakshakMU/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p5final.c:2
-2   int main() {
+Breakpoint 1, main () at p5final.c:52
+52  {
 (gdb) n
-4     printf("enter three numbers\n");
+54    input(&a,&b,&c);
 (gdb) n
-enter three numbers
-5     scanf("%d %d %d",&a,&b,&c);
+enter three numbers:n
+55    cmp(a,b,c,&large);
 (gdb) n
-n
-6     if((a>b)&&(a>c))
+56    output(large);
 (gdb) n
-8     else if((b>a)&&(b>c))
+57    return 0;
 (gdb) n
-9     printf("b is big\n");
-(gdb) n
-b is big
-12    return 0;
-(gdb) n
-13  }(gdb) 
+58  }(gdb) 
